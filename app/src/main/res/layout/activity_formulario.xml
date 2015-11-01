@@ -1,0 +1,167 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.maricarmen.app_aventos.formulario">
+
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salir"
+        android:id="@+id/sal_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/spinnerAfect"
+        android:layout_alignEnd="@+id/spinnerAfect" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Formulario"
+        android:id="@+id/for_txt"
+        android:layout_alignWithParentIfMissing="false"
+        android:autoText="false"
+        android:textColor="#ff181818"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Agente perturbador:"
+        android:id="@+id/p1_txt"
+        android:layout_alignWithParentIfMissing="false"
+        android:autoText="false"
+        android:textColor="#ff181818"
+        android:layout_marginTop="44dp"
+        android:layout_below="@+id/for_txt"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Calamidad:"
+        android:id="@+id/p2_txt"
+        android:layout_alignWithParentIfMissing="false"
+        android:autoText="false"
+        android:textColor="#ff181818"
+        android:layout_below="@+id/p1_txt"
+        android:layout_alignRight="@+id/p1_txt"
+        android:layout_alignEnd="@+id/p1_txt"
+        android:layout_marginTop="30dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Siguiente"
+        android:id="@+id/btnSigForm"
+        android:background="#ff059eff"
+        android:layout_alignTop="@+id/sal_btn"
+        android:layout_centerHorizontal="true"
+        android:onClick="btnSigForm_Click"
+        android:clickable="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Población afectada:"
+        android:id="@+id/p3_txt"
+        android:layout_alignWithParentIfMissing="false"
+        android:autoText="false"
+        android:textColor="#ff181818"
+        android:layout_below="@+id/p2_txt"
+        android:layout_alignRight="@+id/p2_txt"
+        android:layout_alignEnd="@+id/p2_txt"
+        android:layout_marginTop="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Área afectada(km):"
+        android:id="@+id/p4_txt"
+        android:layout_alignWithParentIfMissing="false"
+        android:autoText="false"
+        android:textColor="#ff181818"
+        android:layout_below="@+id/p3_txt"
+        android:layout_alignRight="@+id/p1_txt"
+        android:layout_alignEnd="@+id/p1_txt"
+        android:layout_marginTop="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Tipo de afectación:"
+        android:id="@+id/p5_txt"
+        android:layout_alignWithParentIfMissing="false"
+        android:autoText="false"
+        android:textColor="#ff181818"
+        android:layout_below="@+id/p4_txt"
+        android:layout_alignRight="@+id/p1_txt"
+        android:layout_alignEnd="@+id/p1_txt"
+        android:layout_marginTop="30dp" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerAP"
+        android:layout_alignTop="@+id/p1_txt"
+        android:layout_toRightOf="@+id/p2_txt"
+        android:layout_toEndOf="@+id/p2_txt" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerAfect"
+        android:layout_alignTop="@+id/p5_txt"
+        android:layout_toRightOf="@+id/p5_txt"
+        android:layout_toEndOf="@+id/p5_txt" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/spinnerAP"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pobA_edt"
+        android:layout_alignBottom="@+id/p3_txt"
+        android:layout_toRightOf="@+id/p2_txt"
+        android:layout_alignRight="@+id/aA_edt"
+        android:layout_alignEnd="@+id/aA_edt" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/aA_edt"
+        android:layout_alignBottom="@+id/p4_txt"
+        android:layout_toRightOf="@+id/p4_txt"
+        android:layout_alignRight="@+id/spinnerAfect"
+        android:layout_alignEnd="@+id/spinnerAfect" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerCalam"
+        android:layout_alignTop="@+id/p2_txt"
+        android:layout_alignRight="@+id/scrollView"
+        android:layout_alignEnd="@+id/scrollView"
+        android:layout_alignLeft="@+id/spinnerAP"
+        android:layout_alignStart="@+id/spinnerAP" />
+
+</RelativeLayout>

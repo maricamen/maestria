@@ -1,0 +1,139 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.maricarmen.app_aventos.coordenadas">
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salir"
+        android:id="@+id/sal_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Obtención de Coordendas"
+        android:id="@+id/for_txt"
+        android:layout_alignWithParentIfMissing="false"
+        android:autoText="false"
+        android:textColor="#ff181818"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Latitud:"
+        android:id="@+id/p1_txt"
+        android:layout_alignWithParentIfMissing="false"
+        android:autoText="false"
+        android:textColor="#ff181818"
+        android:layout_marginLeft="42dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="85dp"
+        android:layout_below="@+id/for_txt"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Longitud:"
+        android:id="@+id/lon_txt"
+        android:layout_alignWithParentIfMissing="false"
+        android:autoText="false"
+        android:textColor="#ff181818"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/p1_txt"
+        android:layout_alignRight="@+id/p1_txt"
+        android:layout_alignEnd="@+id/p1_txt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="longitud"
+        android:id="@+id/logText"
+        android:layout_alignTop="@+id/lon_txt"
+        android:layout_alignLeft="@+id/latText"
+        android:layout_alignStart="@+id/latText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="latitud"
+        android:id="@+id/latText"
+        android:layout_alignTop="@+id/p1_txt"
+        android:layout_alignRight="@+id/for_txt"
+        android:layout_alignEnd="@+id/for_txt" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Siguiente"
+        android:id="@+id/btnSigCoord"
+        android:background="#ff059eff"
+        android:layout_above="@+id/sal_btn"
+        android:layout_centerHorizontal="true"
+        android:onClick="btnSigCoord_Click"
+        android:clickable="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Precisión:"
+        android:id="@+id/presText"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/preText"
+        android:text="precision"
+        android:layout_alignTop="@+id/presText"
+        android:layout_alignLeft="@+id/logText"
+        android:layout_alignStart="@+id/logText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Altitud"
+        android:id="@+id/textView"
+        android:layout_alignWithParentIfMissing="false"
+        android:autoText="false"
+        android:textColor="#ff181818"
+        android:layout_below="@+id/lon_txt"
+        android:layout_alignRight="@+id/lon_txt"
+        android:layout_alignEnd="@+id/lon_txt"
+        android:layout_marginTop="50dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="altitud"
+        android:id="@+id/altText"
+        android:layout_above="@+id/presText"
+        android:layout_alignLeft="@+id/preText"
+        android:layout_alignStart="@+id/preText" />
+
+</RelativeLayout>

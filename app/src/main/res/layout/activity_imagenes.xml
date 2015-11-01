@@ -1,0 +1,174 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.maricarmen.app_aventos.imagenes">
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salir"
+        android:id="@+id/sal_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Imagen 1:"
+        android:id="@+id/im1_txt"
+        android:layout_alignWithParentIfMissing="false"
+        android:autoText="false"
+        android:textColor="#ff181818"
+        android:layout_marginTop="120dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginStart="46dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Imagen 2:"
+        android:id="@+id/im2_txt"
+        android:layout_alignTop="@+id/el2_btn"
+        android:layout_alignLeft="@+id/im1_txt"
+        android:layout_alignStart="@+id/im1_txt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Imagen 3:"
+        android:id="@+id/im3_txt"
+        android:layout_below="@+id/el2_btn"
+        android:layout_alignLeft="@+id/im2_txt"
+        android:layout_alignStart="@+id/im2_txt"
+        android:layout_marginTop="7dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Elegir"
+        android:id="@+id/el2_btn"
+        android:background="#ffa9d16c"
+        android:onClick="btnImagen2_Click"
+        android:layout_below="@+id/imageView1"
+        android:layout_toRightOf="@+id/textView7"
+        android:layout_toEndOf="@+id/textView7"
+        android:layout_marginTop="8dp"
+        android:nestedScrollingEnabled="false" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Elegir"
+        android:id="@+id/el1_btn"
+        android:background="#ffa9d16c"
+        android:onClick="btnImagen_Click"
+        android:layout_alignTop="@+id/im1_txt"
+        android:layout_toRightOf="@+id/textView7"
+        android:layout_toEndOf="@+id/textView7" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Elegir"
+        android:id="@+id/el3_btn"
+        android:background="#ffa9d16c"
+        android:onClick="btnImagen3_Click"
+        android:layout_alignTop="@+id/im3_txt"
+        android:layout_toRightOf="@+id/textView7"
+        android:layout_toEndOf="@+id/textView7" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Siguiente"
+        android:id="@+id/btnSigIma"
+        android:background="#ff059eff"
+        android:onClick="btnfinal_Click"
+        android:clickable="true"
+        android:layout_above="@+id/sal_btn"
+        android:layout_toRightOf="@+id/img4_txt"
+        android:layout_toEndOf="@+id/img4_txt" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Elegir"
+        android:id="@+id/button2"
+        android:background="#ffa9d16c"
+        android:layout_alignTop="@+id/img4_txt"
+        android:layout_alignLeft="@+id/el3_btn"
+        android:layout_alignStart="@+id/el3_btn"
+        android:onClick="btnImagen4_Click" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Imagen 4:"
+        android:id="@+id/img4_txt"
+        android:layout_below="@+id/el3_btn"
+        android:layout_alignLeft="@+id/im3_txt"
+        android:layout_alignStart="@+id/im3_txt"
+        android:layout_marginTop="7dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Captura de imágenes"
+        android:id="@+id/textView7"
+        android:layout_alignWithParentIfMissing="false"
+        android:autoText="false"
+        android:textColor="#ff181818"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView1"
+        android:layout_below="@+id/el1_btn"
+        android:layout_alignLeft="@+id/sal_btn"
+        android:layout_alignStart="@+id/sal_btn" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:layout_below="@+id/el1_btn"
+        android:layout_alignLeft="@+id/sal_btn"
+        android:layout_alignStart="@+id/sal_btn" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView3"
+        android:layout_below="@+id/el1_btn"
+        android:layout_alignLeft="@+id/sal_btn"
+        android:layout_alignStart="@+id/sal_btn" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView4"
+        android:layout_below="@+id/el1_btn"
+        android:layout_alignLeft="@+id/sal_btn"
+        android:layout_alignStart="@+id/sal_btn" />
+
+</RelativeLayout>

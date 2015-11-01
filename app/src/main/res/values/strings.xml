@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">App-aventos</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="aPerturbador">
+        <item>Seleccione:</item>
+        <item>Geológico</item>
+        <item>Hidrometeorológico</item>
+        <item>Químico tecnológico</item>
+        <item>Sanitario ecológico</item>
+        <item>Socio organizativo</item>
+    </string-array>
+    <string-array name="cGeologico">
+        <item>Seleccione:</item>
+        <item>Sismos</item>
+        <item>Erupciones volcánicas</item>
+        <item>tsunamis</item>
+        <item>Inestabilidad de laderas</item>
+        <item>Flujos</item>
+        <item>Caídos o derrumbes</item>
+        <item>Hundimientos</item>
+        <item>Subsidencia</item>
+        <item>Agrietamientos</item>
+    </string-array>
+    <string-array name="cHidromet">
+        <item>Seleccione:</item>
+        <item>Ciclones tropicales</item>
+        <item>Lluvias extremas</item>
+        <item>Inundaciones pluviales, fluviales, costeras y lacustres</item>
+        <item>Tormentas de nieve</item>
+        <item>Granizo</item>
+        <item>Tormentas de polvo</item>
+        <item>Tormenta eléctrica</item>
+        <item>Heladas</item>
+        <item>Sequías</item>
+        <item>Ondas cálidas y gélidas</item>
+        <item>Tornados</item>
+    </string-array>
+    <string-array name="cQuimico">
+        <item>Seleccione:</item>
+        <item>Incendios de todo tipo</item>
+        <item>Explosiones</item>
+        <item>Fugas tóxicas</item>
+        <item>Radiaciones</item>
+        <item>Derrames</item>
+    </string-array>
+    <string-array name="cSanitario">
+        <item>Seleccione:</item>
+        <item>Las epidemias</item>
+        <item>Plagas</item>
+        <item>Contaminación del aire, agua, suelo y alimentos</item>
+    </string-array>
+    <string-array name="cSocioorg">
+        <item>Seleccione:</item>
+        <item>Demostraciones de inconformidad social</item>
+        <item>Concentración masiva de población</item>
+        <item>Terrorismo</item>
+        <item>Sabotaje</item>
+        <item>Vandalismo</item>
+        <item>Accidentes aéreos, marítimos o terrestres</item>
+        <item>Interrupción o afectación de los servicios básicos o de infraestructura estratégica</item>
+    </string-array>
+    <string-array name="arregloVacio">
+        <item>Seleccione:</item>
+    </string-array>
+    <string-array name="afectacion">
+        <item>Seleccione:</item>
+        <item>Infraestructura</item>
+        <item>Vías de comunicación</item>
+        <item>Servicios vitales</item>
+        <item>Edificaciones</item>
+    </string-array>
+
+    <string name="title_activity_inicio">inicio</string>
+    <string name="title_activity_coordenadas">coordenadas</string>
+    <string name="title_activity_imagenes">imagenes</string>
+    <string name="title_activity_activity_final">activity_final</string>
+    <string name="title_activity_enviado">enviado</string>
+    <string name="title_activity_camara">camara</string>
+    <string name="title_activity_noticias_inicio">noticiasInicio</string>
+
+</resources>
