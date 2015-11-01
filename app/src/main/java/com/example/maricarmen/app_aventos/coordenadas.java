@@ -1,7 +1,6 @@
 package com.example.maricarmen.app_aventos;
 
 import android.content.Context;
-import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -28,12 +27,15 @@ public class coordenadas extends ActionBarActivity implements LocationListener {
         Boolean RedActivada = locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
         String provider = "";
 
+        if (RedActivada){
+            provider = LocationManager.NETWORK_PROVIDER;
+        }
+
         if (GPSActivado){
             provider = LocationManager.GPS_PROVIDER;
         }
-        else if (RedActivada){
-            provider = LocationManager.NETWORK_PROVIDER;
-        }
+
+            locationManager.requestLocationUpdates(provider, 0, 0, this);
             Location location = locationManager.getLastKnownLocation(provider);
             locationManager.requestLocationUpdates(provider,0,0,this);
             if(location !=  null){
