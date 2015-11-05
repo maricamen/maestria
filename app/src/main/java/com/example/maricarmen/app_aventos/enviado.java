@@ -1,10 +1,12 @@
 package com.example.maricarmen.app_aventos;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 
 public class enviado extends ActionBarActivity {
@@ -13,6 +15,22 @@ public class enviado extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_enviado);
+
+        // Botón de salida (final de la aplicación)
+        final Button boton_salida = (Button)findViewById(R.id.btn_sal_fin);
+        boton_salida.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                finish();
+                Intent intent = new Intent(Intent.ACTION_MAIN);
+                intent.addCategory(Intent.CATEGORY_HOME);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+
+            }
+        });
+
     }
 
 
@@ -37,6 +55,12 @@ public class enviado extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void btn_ini_fin_Click(View view){
+        Intent i = new Intent(this, inicio.class);
+        startActivity(i);
+    }
+
     public void btnSalirE_Click(View view){
         finish();
     }

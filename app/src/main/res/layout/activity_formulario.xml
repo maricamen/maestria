@@ -12,17 +12,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Salir"
-        android:id="@+id/sal_btn"
+        android:id="@+id/btn_sal_for"
         android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/spinnerAfect"
-        android:layout_alignEnd="@+id/spinnerAfect" />
+        android:layout_alignRight="@+id/spn_afe"
+        android:layout_alignEnd="@+id/spn_afe" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Formulario"
-        android:id="@+id/for_txt"
+        android:id="@+id/txt_tit_for"
         android:layout_alignWithParentIfMissing="false"
         android:autoText="false"
         android:textColor="#ff181818"
@@ -35,12 +35,12 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Agente perturbador:"
-        android:id="@+id/p1_txt"
+        android:id="@+id/txt_ap"
         android:layout_alignWithParentIfMissing="false"
         android:autoText="false"
         android:textColor="#ff181818"
         android:layout_marginTop="44dp"
-        android:layout_below="@+id/for_txt"
+        android:layout_below="@+id/txt_tit_for"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -49,13 +49,13 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Calamidad:"
-        android:id="@+id/p2_txt"
+        android:id="@+id/txt_cal"
         android:layout_alignWithParentIfMissing="false"
         android:autoText="false"
         android:textColor="#ff181818"
-        android:layout_below="@+id/p1_txt"
-        android:layout_alignRight="@+id/p1_txt"
-        android:layout_alignEnd="@+id/p1_txt"
+        android:layout_below="@+id/txt_ap"
+        android:layout_alignRight="@+id/txt_ap"
+        android:layout_alignEnd="@+id/txt_ap"
         android:layout_marginTop="30dp" />
 
     <Button
@@ -63,25 +63,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Siguiente"
-        android:id="@+id/btnSigForm"
+        android:id="@+id/btn_sig_form"
         android:background="#ff059eff"
-        android:layout_alignTop="@+id/sal_btn"
-        android:layout_centerHorizontal="true"
         android:onClick="btnSigForm_Click"
-        android:clickable="true" />
+        android:clickable="true"
+        android:layout_above="@+id/btn_sal_for"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Población afectada:"
-        android:id="@+id/p3_txt"
+        android:id="@+id/txt_pa"
         android:layout_alignWithParentIfMissing="false"
         android:autoText="false"
         android:textColor="#ff181818"
-        android:layout_below="@+id/p2_txt"
-        android:layout_alignRight="@+id/p2_txt"
-        android:layout_alignEnd="@+id/p2_txt"
+        android:layout_below="@+id/txt_cal"
+        android:layout_alignRight="@+id/txt_cal"
+        android:layout_alignEnd="@+id/txt_cal"
         android:layout_marginTop="30dp" />
 
     <TextView
@@ -89,13 +89,13 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Área afectada(km):"
-        android:id="@+id/p4_txt"
+        android:id="@+id/txt_aa"
         android:layout_alignWithParentIfMissing="false"
         android:autoText="false"
         android:textColor="#ff181818"
-        android:layout_below="@+id/p3_txt"
-        android:layout_alignRight="@+id/p1_txt"
-        android:layout_alignEnd="@+id/p1_txt"
+        android:layout_below="@+id/txt_pa"
+        android:layout_alignRight="@+id/txt_ap"
+        android:layout_alignEnd="@+id/txt_ap"
         android:layout_marginTop="30dp" />
 
     <TextView
@@ -103,65 +103,65 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Tipo de afectación:"
-        android:id="@+id/p5_txt"
+        android:id="@+id/txt_ta"
         android:layout_alignWithParentIfMissing="false"
         android:autoText="false"
         android:textColor="#ff181818"
-        android:layout_below="@+id/p4_txt"
-        android:layout_alignRight="@+id/p1_txt"
-        android:layout_alignEnd="@+id/p1_txt"
+        android:layout_below="@+id/txt_aa"
+        android:layout_alignRight="@+id/txt_ap"
+        android:layout_alignEnd="@+id/txt_ap"
         android:layout_marginTop="30dp" />
 
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/spinnerAP"
-        android:layout_alignTop="@+id/p1_txt"
-        android:layout_toRightOf="@+id/p2_txt"
-        android:layout_toEndOf="@+id/p2_txt" />
+        android:id="@+id/spn_ap"
+        android:layout_alignTop="@+id/txt_ap"
+        android:layout_toRightOf="@+id/txt_cal"
+        android:layout_toEndOf="@+id/txt_cal" />
 
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/spinnerAfect"
-        android:layout_alignTop="@+id/p5_txt"
-        android:layout_toRightOf="@+id/p5_txt"
-        android:layout_toEndOf="@+id/p5_txt" />
+        android:id="@+id/spn_afe"
+        android:layout_alignTop="@+id/txt_ta"
+        android:layout_toRightOf="@+id/txt_ta"
+        android:layout_toEndOf="@+id/txt_ta" />
 
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/scrollView"
-        android:layout_below="@+id/spinnerAP"
+        android:layout_below="@+id/spn_ap"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/pobA_edt"
-        android:layout_alignBottom="@+id/p3_txt"
-        android:layout_toRightOf="@+id/p2_txt"
-        android:layout_alignRight="@+id/aA_edt"
-        android:layout_alignEnd="@+id/aA_edt" />
+        android:id="@+id/edt_pa"
+        android:layout_alignBottom="@+id/txt_pa"
+        android:layout_toRightOf="@+id/txt_cal"
+        android:layout_alignRight="@+id/edt_aa"
+        android:layout_alignEnd="@+id/edt_aa" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/aA_edt"
-        android:layout_alignBottom="@+id/p4_txt"
-        android:layout_toRightOf="@+id/p4_txt"
-        android:layout_alignRight="@+id/spinnerAfect"
-        android:layout_alignEnd="@+id/spinnerAfect" />
+        android:id="@+id/edt_aa"
+        android:layout_alignBottom="@+id/txt_aa"
+        android:layout_toRightOf="@+id/txt_aa"
+        android:layout_alignRight="@+id/spn_afe"
+        android:layout_alignEnd="@+id/spn_afe" />
 
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/spinnerCalam"
-        android:layout_alignTop="@+id/p2_txt"
+        android:id="@+id/spn_cal"
+        android:layout_alignTop="@+id/txt_cal"
         android:layout_alignRight="@+id/scrollView"
         android:layout_alignEnd="@+id/scrollView"
-        android:layout_alignLeft="@+id/spinnerAP"
-        android:layout_alignStart="@+id/spinnerAP" />
+        android:layout_alignLeft="@+id/spn_ap"
+        android:layout_alignStart="@+id/spn_ap" />
 
 </RelativeLayout>

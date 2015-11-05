@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Sistema de Levantamiento de Campos y Difusión de Eventos Naturales"
-        android:id="@+id/textView3"
+        android:id="@+id/txt_tit_not"
         android:layout_alignWithParentIfMissing="false"
         android:autoText="false"
         android:textColor="#ff181818"
@@ -42,9 +42,9 @@
         android:background="#ff06b9ff"
         android:onClick="btnlevantamiento_Click"
         android:layout_marginTop="94dp"
-        android:layout_below="@+id/textView3"
-        android:layout_alignRight="@+id/textView3"
-        android:layout_alignEnd="@+id/textView3"
+        android:layout_below="@+id/txt_tit_not"
+        android:layout_alignRight="@+id/txt_tit_not"
+        android:layout_alignEnd="@+id/txt_tit_not"
         android:layout_marginRight="50dp"
         android:layout_marginEnd="50dp" />
 
@@ -65,10 +65,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Manuales"
-        android:id="@+id/btn_manuales"
+        android:id="@+id/btn_man"
         android:layout_alignTop="@+id/btn_vol"
         android:layout_alignLeft="@+id/btn_sis"
         android:layout_alignStart="@+id/btn_sis"
         android:background="#ff06b9ff" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salir"
+        android:id="@+id/btn_sal_not"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/btn_man"
+        android:layout_alignEnd="@+id/btn_man" />
 
 </RelativeLayout>

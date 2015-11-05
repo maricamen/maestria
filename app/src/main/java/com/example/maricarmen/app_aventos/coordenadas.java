@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.content.Intent;
@@ -44,6 +45,21 @@ public class coordenadas extends ActionBarActivity implements LocationListener {
             else {
                 Toast.makeText(getApplicationContext(),"Ubicación no encontrada",Toast.LENGTH_LONG).show();
             }
+
+        final Button boton_salida = (Button)findViewById(R.id.btn_sal_coo);
+        boton_salida.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                finish();
+                Intent intent = new Intent(Intent.ACTION_MAIN);
+                intent.addCategory(Intent.CATEGORY_HOME);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+
+            }
+        });
+
     }
 
 

@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Salir"
-        android:id="@+id/sal_btn"
+        android:id="@+id/btn_sal_coo"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Obtención de Coordendas"
-        android:id="@+id/for_txt"
+        android:id="@+id/txt_tit_for"
         android:layout_alignWithParentIfMissing="false"
         android:autoText="false"
         android:textColor="#ff181818"
@@ -34,14 +34,14 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Latitud:"
-        android:id="@+id/p1_txt"
+        android:id="@+id/txt_ap"
         android:layout_alignWithParentIfMissing="false"
         android:autoText="false"
         android:textColor="#ff181818"
         android:layout_marginLeft="42dp"
         android:layout_marginStart="42dp"
         android:layout_marginTop="85dp"
-        android:layout_below="@+id/for_txt"
+        android:layout_below="@+id/txt_tit_for"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -55,9 +55,9 @@
         android:autoText="false"
         android:textColor="#ff181818"
         android:layout_marginTop="50dp"
-        android:layout_below="@+id/p1_txt"
-        android:layout_alignRight="@+id/p1_txt"
-        android:layout_alignEnd="@+id/p1_txt" />
+        android:layout_below="@+id/txt_ap"
+        android:layout_alignRight="@+id/txt_ap"
+        android:layout_alignEnd="@+id/txt_ap" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -75,21 +75,21 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="latitud"
         android:id="@+id/latText"
-        android:layout_alignTop="@+id/p1_txt"
-        android:layout_alignRight="@+id/for_txt"
-        android:layout_alignEnd="@+id/for_txt" />
+        android:layout_alignTop="@+id/txt_ap"
+        android:layout_alignRight="@+id/txt_tit_for"
+        android:layout_alignEnd="@+id/txt_tit_for" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Siguiente"
-        android:id="@+id/btnSigCoord"
+        android:id="@+id/btn_sig_coo"
         android:background="#ff059eff"
-        android:layout_above="@+id/sal_btn"
-        android:layout_centerHorizontal="true"
         android:onClick="btnSigCoord_Click"
-        android:clickable="true" />
+        android:clickable="true"
+        android:layout_above="@+id/btn_sal_coo"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"

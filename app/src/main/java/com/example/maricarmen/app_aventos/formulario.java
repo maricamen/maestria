@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.view.View;
 import android.widget.AdapterView;
@@ -33,7 +34,7 @@ public class formulario extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formulario);
 
-        Spinner spinnerA = (Spinner) findViewById(R.id.spinnerAP);
+        Spinner spinnerA = (Spinner) findViewById(R.id.spn_ap);
 // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapterA = ArrayAdapter.createFromResource(this,
                 R.array.aPerturbador, android.R.layout.simple_spinner_item);
@@ -45,7 +46,7 @@ public class formulario extends ActionBarActivity {
 
 
 
-        Spinner spinnerAf = (Spinner) findViewById(R.id.spinnerAfect);
+        Spinner spinnerAf = (Spinner) findViewById(R.id.spn_afe);
 // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapterAf = ArrayAdapter.createFromResource(this,
                 R.array.afectacion, android.R.layout.simple_spinner_item);
@@ -60,6 +61,21 @@ public class formulario extends ActionBarActivity {
         longitud = Float.parseFloat(bundle.getString("longitud"));
         altitud = Float.parseFloat(bundle.getString("altitud"));
         precision = Float.parseFloat(bundle.getString("precision"));
+
+        // Botón de salida (final de la aplicación)
+        final Button boton_salida = (Button)findViewById(R.id.btn_sal_for);
+        boton_salida.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                finish();
+                Intent intent = new Intent(Intent.ACTION_MAIN);
+                intent.addCategory(Intent.CATEGORY_HOME);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+
+            }
+        });
 
     }
 
@@ -99,7 +115,7 @@ public class formulario extends ActionBarActivity {
     }
 
     private void cargaSpinnerCalamidad (int posicion){
-        subspinner = (Spinner) findViewById(R.id.spinnerCalam);
+        subspinner = (Spinner) findViewById(R.id.spn_cal);
 
         geologico = ArrayAdapter.createFromResource
                 (this, R.array.cGeologico,
@@ -149,19 +165,19 @@ public class formulario extends ActionBarActivity {
         i.putExtra("altitud", String.valueOf(altitud));
         i.putExtra("precision", String.valueOf(precision));
 
-        Spinner spinnerAp = (Spinner) findViewById(R.id.spinnerAP);
+        Spinner spinnerAp = (Spinner) findViewById(R.id.spn_ap);
         i.putExtra("agenteP",String.valueOf(spinnerAp.getSelectedItemId()));
 
-        Spinner spinnerCa = (Spinner) findViewById(R.id.spinnerCalam);
+        Spinner spinnerCa = (Spinner) findViewById(R.id.spn_cal);
         i.putExtra("calamidad",String.valueOf(spinnerCa.getSelectedItemId()));
 
-        TextView pobAfec = (TextView) findViewById(R.id.pobA_edt);
+        TextView pobAfec = (TextView) findViewById(R.id.edt_pa);
         i.putExtra("poblacionA", pobAfec.getText().toString());
 
-        TextView arAfec = (TextView) findViewById(R.id.aA_edt);
+        TextView arAfec = (TextView) findViewById(R.id.edt_aa);
         i.putExtra("areaA", arAfec.getText().toString());
 
-        Spinner spinnerTafec = (Spinner) findViewById(R.id.spinnerAfect);
+        Spinner spinnerTafec = (Spinner) findViewById(R.id.spn_afe);
         i.putExtra("tipoAfec",String.valueOf(spinnerTafec.getSelectedItemId()));
 
         startActivity(i);

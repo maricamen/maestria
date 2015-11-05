@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Salir"
-        android:id="@+id/sal_btn"
+        android:id="@+id/btn_sal_img"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Imagen 1:"
-        android:id="@+id/im1_txt"
+        android:id="@+id/txt_img1"
         android:layout_alignWithParentIfMissing="false"
         android:autoText="false"
         android:textColor="#ff181818"
@@ -36,20 +36,20 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Imagen 2:"
-        android:id="@+id/im2_txt"
-        android:layout_alignTop="@+id/el2_btn"
-        android:layout_alignLeft="@+id/im1_txt"
-        android:layout_alignStart="@+id/im1_txt" />
+        android:id="@+id/txt_img2"
+        android:layout_alignTop="@+id/btn_img2"
+        android:layout_alignLeft="@+id/txt_img1"
+        android:layout_alignStart="@+id/txt_img1" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Imagen 3:"
-        android:id="@+id/im3_txt"
-        android:layout_below="@+id/el2_btn"
-        android:layout_alignLeft="@+id/im2_txt"
-        android:layout_alignStart="@+id/im2_txt"
+        android:id="@+id/txt_img3"
+        android:layout_below="@+id/btn_img2"
+        android:layout_alignLeft="@+id/txt_img2"
+        android:layout_alignStart="@+id/txt_img2"
         android:layout_marginTop="7dp" />
 
     <Button
@@ -57,12 +57,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Elegir"
-        android:id="@+id/el2_btn"
+        android:id="@+id/btn_img2"
         android:background="#ffa9d16c"
         android:onClick="btnImagen2_Click"
         android:layout_below="@+id/imageView1"
-        android:layout_toRightOf="@+id/textView7"
-        android:layout_toEndOf="@+id/textView7"
+        android:layout_toRightOf="@+id/txt_tit_not"
+        android:layout_toEndOf="@+id/txt_tit_not"
         android:layout_marginTop="8dp"
         android:nestedScrollingEnabled="false" />
 
@@ -71,35 +71,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Elegir"
-        android:id="@+id/el1_btn"
+        android:id="@+id/btn_img1"
         android:background="#ffa9d16c"
         android:onClick="btnImagen_Click"
-        android:layout_alignTop="@+id/im1_txt"
-        android:layout_toRightOf="@+id/textView7"
-        android:layout_toEndOf="@+id/textView7" />
+        android:layout_alignTop="@+id/txt_img1"
+        android:layout_toRightOf="@+id/txt_tit_not"
+        android:layout_toEndOf="@+id/txt_tit_not" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Elegir"
-        android:id="@+id/el3_btn"
+        android:id="@+id/btn_img3"
         android:background="#ffa9d16c"
         android:onClick="btnImagen3_Click"
-        android:layout_alignTop="@+id/im3_txt"
-        android:layout_toRightOf="@+id/textView7"
-        android:layout_toEndOf="@+id/textView7" />
+        android:layout_alignTop="@+id/txt_img3"
+        android:layout_toRightOf="@+id/txt_tit_not"
+        android:layout_toEndOf="@+id/txt_tit_not" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Siguiente"
-        android:id="@+id/btnSigIma"
+        android:id="@+id/btn_sig_img"
         android:background="#ff059eff"
         android:onClick="btnfinal_Click"
         android:clickable="true"
-        android:layout_above="@+id/sal_btn"
+        android:layout_above="@+id/btn_sal_img"
         android:layout_toRightOf="@+id/img4_txt"
         android:layout_toEndOf="@+id/img4_txt" />
 
@@ -108,11 +108,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Elegir"
-        android:id="@+id/button2"
+        android:id="@+id/btn_img4"
         android:background="#ffa9d16c"
         android:layout_alignTop="@+id/img4_txt"
-        android:layout_alignLeft="@+id/el3_btn"
-        android:layout_alignStart="@+id/el3_btn"
+        android:layout_alignLeft="@+id/btn_img3"
+        android:layout_alignStart="@+id/btn_img3"
         android:onClick="btnImagen4_Click" />
 
     <TextView
@@ -121,9 +121,9 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Imagen 4:"
         android:id="@+id/img4_txt"
-        android:layout_below="@+id/el3_btn"
-        android:layout_alignLeft="@+id/im3_txt"
-        android:layout_alignStart="@+id/im3_txt"
+        android:layout_below="@+id/btn_img3"
+        android:layout_alignLeft="@+id/txt_img3"
+        android:layout_alignStart="@+id/txt_img3"
         android:layout_marginTop="7dp" />
 
     <TextView
@@ -131,7 +131,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Captura de imágenes"
-        android:id="@+id/textView7"
+        android:id="@+id/txt_tit_not"
         android:layout_alignWithParentIfMissing="false"
         android:autoText="false"
         android:textColor="#ff181818"
@@ -143,32 +143,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView1"
-        android:layout_below="@+id/el1_btn"
-        android:layout_alignLeft="@+id/sal_btn"
-        android:layout_alignStart="@+id/sal_btn" />
+        android:layout_below="@+id/btn_img1"
+        android:layout_alignLeft="@+id/btn_sal_ini"
+        android:layout_alignStart="@+id/btn_sal_ini" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView2"
-        android:layout_below="@+id/el1_btn"
-        android:layout_alignLeft="@+id/sal_btn"
-        android:layout_alignStart="@+id/sal_btn" />
+        android:layout_below="@+id/btn_img1"
+        android:layout_alignLeft="@+id/btn_sal_ini"
+        android:layout_alignStart="@+id/btn_sal_ini" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView3"
-        android:layout_below="@+id/el1_btn"
-        android:layout_alignLeft="@+id/sal_btn"
-        android:layout_alignStart="@+id/sal_btn" />
+        android:layout_below="@+id/btn_img1"
+        android:layout_alignLeft="@+id/btn_sal_ini"
+        android:layout_alignStart="@+id/btn_sal_ini" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView4"
-        android:layout_below="@+id/el1_btn"
-        android:layout_alignLeft="@+id/sal_btn"
-        android:layout_alignStart="@+id/sal_btn" />
+        android:layout_below="@+id/btn_img1"
+        android:layout_alignLeft="@+id/btn_sal_ini"
+        android:layout_alignStart="@+id/btn_sal_ini" />
 
 </RelativeLayout>

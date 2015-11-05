@@ -1,8 +1,6 @@
 package com.example.maricarmen.app_aventos;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -11,20 +9,14 @@ import android.provider.MediaStore;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Base64;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Toast;
-import  java.io.ByteArrayOutputStream;
-import android.graphics.drawable.BitmapDrawable;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.IOException;
-import java.nio.ByteBuffer;
 
 
 public class imagenes extends ActionBarActivity {
@@ -42,7 +34,7 @@ public class imagenes extends ActionBarActivity {
     boolean guardado;
     rest servicio;
 
-    Uri imageUri;
+    //Uri imageUri;
     private static File carpetaEventos;
     String rutaArchivo;
 
@@ -73,6 +65,22 @@ public class imagenes extends ActionBarActivity {
         pobafectada = Integer.parseInt(bundle.getString("poblacionA"));
         aafectada = Integer.parseInt(bundle.getString("areaA"));
         tipoa = Integer.parseInt(bundle.getString("tipoAfec"));
+
+        // Botón de salida (final de la aplicación)
+        final Button boton_salida = (Button)findViewById(R.id.btn_sal_img);
+        boton_salida.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                finish();
+                Intent intent = new Intent(Intent.ACTION_MAIN);
+                intent.addCategory(Intent.CATEGORY_HOME);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+
+            }
+        });
+
     }
 
 
@@ -109,7 +117,7 @@ public class imagenes extends ActionBarActivity {
         }
         else
         {
-            Button botonSig = (Button) findViewById(R.id.btnSigIma);
+            Button botonSig = (Button) findViewById(R.id.btn_sig_img);
             botonSig.setText("Reintentar");
         }
     }

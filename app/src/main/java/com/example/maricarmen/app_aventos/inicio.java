@@ -6,14 +6,29 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-
+import android.widget.Button;
 
 public class inicio extends ActionBarActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio);
+
+        // Botón de salida (final de la aplicación)
+        final Button boton_salida = (Button)findViewById(R.id.btn_sal_ini);
+        boton_salida.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                finish();
+                Intent intent = new Intent(Intent.ACTION_MAIN);
+                intent.addCategory(Intent.CATEGORY_HOME);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+
+            }
+        });
+
     }
 
 
